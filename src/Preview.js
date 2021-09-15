@@ -40,7 +40,7 @@ function Preview() {
         uploadTask.on(
             'state_changed',
             null,
-            (error) => {
+            error => {
                 console.log(error);
             },
             () => {
