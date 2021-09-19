@@ -10,7 +10,6 @@ import { db } from './firebase';
 
 function Chat({ id, username, timestamp, read, imageUrl, profilePic }) {
     const dispatch = useDispatch();
-
     const history = useHistory();
 
     const open = () => {
@@ -22,6 +21,7 @@ function Chat({ id, username, timestamp, read, imageUrl, profilePic }) {
                 },
                 { merge: true }
             );
+            
             history.push('/chats/view');
         }
     };
